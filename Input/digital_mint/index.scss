@@ -1,0 +1,23 @@
+.digitalmint-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 10px;
+  .digitalmint-input-left {
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    .digitalmint-inner-input {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+

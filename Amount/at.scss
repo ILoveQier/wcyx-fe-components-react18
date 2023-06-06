@@ -1,0 +1,35 @@
+.moneys-container {
+    display: flex;
+    align-items: center;
+
+    .vdm-wrap {
+        position: relative;
+        width: 10px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        &.needBorder {
+            border: 1px solid #eee;
+        }
+        &.coma{
+            width: 5px;
+        }
+        .vd-group {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: all 1s;
+            width: 100%;
+            div {
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+            }
+        }
+    }
+    
+}

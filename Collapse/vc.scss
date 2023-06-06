@@ -1,0 +1,52 @@
+.vc-container {
+  background-color: #fff;
+  .item-wrap {
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    border-radius: 5px;
+    .item-title {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .titleArrow {
+        display: flex;
+        height: fit-content;
+      }
+      .box {
+        width: 0;
+        height: 0;
+        border-top: 10px solid #000;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: relative;
+        .slim {
+          width: 0;
+          height: 0;
+          border-top: 10px solid #fff;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          position: absolute;
+          right: -8px;
+          top: -12px;
+        }
+      }
+    }
+    .item-content {
+      transition: all 0.5s;
+      overflow: hidden;
+      max-height: 0px;
+      &.isContentopen {
+        overflow: auto;
+        max-height: 200px;
+      }
+    }
+    .isArrowOpen {
+      transition: all 0.3s;
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}

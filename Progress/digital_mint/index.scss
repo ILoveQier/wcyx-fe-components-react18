@@ -1,0 +1,30 @@
+.digitalmint-progress-container {
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  .digitalmint-progress-start {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .digitalmint-progress-finished {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
+  .digitalmint-progress-middle {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    transform: translateX(-100%);
+  }
+  .digitalmint-progress-end {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
