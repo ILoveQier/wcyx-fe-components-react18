@@ -1,4 +1,4 @@
-.digitalmint-input-container {
+.ppdeal-input-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -6,13 +6,13 @@
   width: 100%;
   border: 1px solid #eee;
   padding: 10px;
-  padding-left: 30px;
-  .digitalmint-input-left {
+  font-size: 36px;
+  .ppdeal-input-left {
     flex: 1;
     margin-right: 10px;
     display: flex;
     align-items: center;
-    .digitalmint-inner-input {
+    .ppdeal-inner-input {
       width: 100%;
       border: none;
       background-color: transparent;

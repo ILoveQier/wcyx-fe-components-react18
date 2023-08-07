@@ -14,12 +14,14 @@
     left: 0;
     height: 100%;
     border-radius: 20px 0 0 20px;
+    transition: all 1s;
   }
   .digitalmint-progress-middle {
     position: absolute;
     top: 0;
     z-index: 3;
     transform: translateX(-100%);
+    transition: all 1s;
   }
   .digitalmint-progress-end {
     position: absolute;

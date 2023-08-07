@@ -8,7 +8,7 @@ export default function Progress({
   finishedBgc = "#765393",
   children,
 }) {
-  const [ratio, setRatio] = useState(5);
+  const [ratio, setRatio] = useState(0);
   useEffect(() => {
     let rat = (amount > 100 ? 100 : amount) / total;
     setRatio(rat);
