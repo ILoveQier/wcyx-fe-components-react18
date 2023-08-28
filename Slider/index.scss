@@ -1,0 +1,22 @@
+.slider-container {
+  margin: 20px 0;
+  position: relative;
+  width: 290px;
+  height: 10px;
+  background-color: aquamarine;
+  .handle-item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 2;
+    cursor: pointer;
+    .default-handle {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: red;
+    }
+  }
+}
