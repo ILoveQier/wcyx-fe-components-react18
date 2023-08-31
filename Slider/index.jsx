@@ -26,6 +26,9 @@ function Slider({
     document.addEventListener("mouseup", (e) => {
       setIsMouseDown(false);
     });
+    document.addEventListener("touchend", (e) => {
+      setIsMouseDown(false);
+    });
     return () => {};
   }, []);
 
@@ -56,6 +59,7 @@ function Slider({
       });
       return;
     }
+
     if (
       e.clientX <=
       handleParentRef.current.offsetLeft + handleItemRef.current.clientWidth / 2
@@ -65,6 +69,7 @@ function Slider({
       });
       return;
     }
+
     sethandlePos({
       left:
         e.clientX -
@@ -81,6 +86,11 @@ function Slider({
       onClick={(e) => {
         _click_move_change(e, true);
       }}
+      onTouchMove={(e) => {
+        if (isMouseDown) {
+          _click_move_change(e.touches[0]);
+        }
+      }}
       onMouseMove={(e) => {
         if (isMouseDown) {
           _click_move_change(e);
@@ -91,6 +101,9 @@ function Slider({
         ref={handleItemRef}
         className="handle-item"
         style={handlePos}
+        onTouchStart={(e) => {
+          setIsMouseDown(true);
+        }}
         onMouseDown={(e) => {
           setIsMouseDown(true);
         }}
